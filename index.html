@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe app</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Recipe Finder</h2>
+            <p>
+               ✨Search Delicious recipes, made simple & mouth-watering! ✨
+            </p>
+            <div class="searchBox">
+                <input type="text" placeholder="Search for recipes" id="searchInput">
+                <button onclick="searchRecipes()">Search</button>
+            </div>
+    </div> 
+
+    <!-- Dark/Light Mode Toggle Button -->
+    <button id="modeToggle">🌙</button>
+
+    <div class="filterBox">
+        <label for="categorySelect">Filter by Category:</label>
+        <select id="categorySelect" onchange="filterByCategory()">
+            <option value="">-- Select Category --</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Beef">Beef</option>
+            <option value="Chicken">Chicken</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Vegan">Vegan</option>
+        </select>
+
+
+        <label for="areaSelect">Filter by Area:</label>
+        <select id="areaSelect" onchange="filterByArea()">
+            <option value="">-- Select Area --</option>
+            <option value="Indian">Indian</option>
+            <option value="American">American</option>
+            <option value="Italian">Italian</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Chinese">Chinese</option>
+        </select>
+    </div>
+
+    <div class="recipes" id="recipes"></div>
+    <div class="notFound" id="notFound">Search your favourite recipes</div>
+
+    <div class="popup-card" id="popupCard">
+        <button class="close-btn" onclick="closeRecipe()">Close</button>
+        <h3 id="recipeTitle"></h3>
+        <p id="recipeDetails"></p>
+    </div>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
